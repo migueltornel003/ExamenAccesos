@@ -8,11 +8,12 @@ public class Main {
 		do {
 			do {
 				System.out.println("QUE OPCIÓN DESEAS ELEGIR:\n" +
-						"EJERCICIO 1\n"+
-						"EJERCICIO 2\n"+
-						"EJERCICIO 3\n"+
-						"EJERCICIO 4\n"+
-						"EJERCICIO 5\n");
+						"EJERCICIO 1 - 1\n"+
+						"EJERCICIO 2 - 2\n"+
+						"EJERCICIO 3 - 3\n"+
+						"EJERCICIO 4 - 4\n"+
+						"EJERCICIO 5 - 5\n"+
+						"SALIR - 0");
 				option = sc.nextInt();
 				sc.nextLine();
 			}while (option<0 || option>5);
