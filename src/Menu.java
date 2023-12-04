@@ -1,4 +1,5 @@
 import Datos.Cliente;
+import Datos.Gama;
 import Datos.Producto;
 import Ejercicios.*;
 
@@ -20,10 +21,11 @@ public class Menu {
 	public static void Ejercicio2() {
 		Ejercicio2 ejercicio2 = new Ejercicio2();
 		Scanner scProdcuto = new Scanner(System.in);
-		String codigo_producto,nombre,gama,dimensiones,proveedor,descripcion;
+		String codigo_producto,nombre,gama="",dimensiones,proveedor,descripcion;
 		int cantidad_en_stock;
 		double precio_venta,precio_proveedor;
-
+		List<Gama> gamas = ejercicio2.selectGama();
+		int option;
 		/*do {
 			do {
 
@@ -36,8 +38,38 @@ public class Menu {
 		codigo_producto = scProdcuto.nextLine();
 		System.out.println("NOMBRE");
 		nombre = scProdcuto.nextLine();
-		System.out.println("GAMA");
-		gama = scProdcuto.nextLine();
+		gamas.forEach(gamaProducto -> {
+			System.out.println(gamaProducto);
+			System.out.println();
+
+		});
+		do {
+			System.out.println("GAMA(INTRODUCE NUMERO):\n" +
+					"1 - Aromáticas\n" +
+					"2 - Frutales\n" +
+					"3 - Herbaceas\n" +
+					"4 - Herramientas\n" +
+					"5 - Ornamentales");
+			option = scProdcuto.nextInt();
+		}while (option<1 || option > 5);
+		scProdcuto.nextLine();
+		switch (option){
+			case 1:
+				gama = "Aromáticas";
+				break;
+			case 2:
+				gama = "Frutales";
+				break;
+			case 3:
+				gama = "Herbaceas";
+				break;
+			case 4:
+				gama = "Herramientas";
+				break;
+			case 5:
+				gama = "Ornamentales";
+				break;
+		}
 		System.out.println("DIMENSIONES");
 		dimensiones = scProdcuto.nextLine();
 		System.out.println("PROVEEDOR");
