@@ -127,6 +127,14 @@ public class Menu {
 	}
 
 	public static void Ejercicio5() {
+		Ejercicio5 ejercicio5 = new Ejercicio5();
+		int codigo_pedido;
+		Scanner scPedido = new Scanner(System.in);
+
+		System.out.println("CÓDIGO DE PEDIDO");
+		codigo_pedido = scPedido.nextInt();
+
+		System.out.println(ejercicio5.delete(codigo_pedido));
 
 	}
 }
