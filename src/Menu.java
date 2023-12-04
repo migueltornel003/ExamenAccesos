@@ -1,7 +1,9 @@
 import Datos.Cliente;
 import Datos.Gama;
+import Datos.Oficina;
 import Datos.Producto;
 import Ejercicios.*;
+import Validation.ValidationOficina;
 
 import java.sql.Date;
 import java.util.List;
@@ -86,6 +88,23 @@ public class Menu {
 	}
 
 	public static void Ejercicio3() {
+		Ejercicio3 ejercicio3 = new Ejercicio3();
+		Scanner scOficina = new Scanner(System.in);
+		String codigo_oficina,telefono;
+
+		System.out.println("CODIGO_OFICINA");
+		codigo_oficina = scOficina.nextLine();
+		System.out.println("TELEFONO");
+		telefono = scOficina.nextLine();
+
+		if (ValidationOficina.OficinaExist(codigo_oficina)){
+			Oficina oficina = new Oficina(codigo_oficina,telefono);
+			System.out.println(ejercicio3.update(oficina));
+		}else{
+			System.out.println("No se ha modificado nada porque el código de oficina no existe");
+		}
+
+
 	}
 
 	public static void Ejercicio4() {
