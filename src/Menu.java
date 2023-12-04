@@ -106,13 +106,13 @@ public class Menu {
 
 	public static void Ejercicio4() {
 		Ejercicio4 ejercicio4 = new Ejercicio4();
-		Scanner scOficina = new Scanner(System.in);
+		Scanner scPedido = new Scanner(System.in);
 		Date fechaInicio,fechaFinal;
 
 		System.out.println("FECHA DE INICIO");
-		fechaInicio = Date.valueOf(scOficina.nextLine());
+		fechaInicio = Date.valueOf(scPedido.nextLine());
 		System.out.println("FECHA DE FIN");
-		fechaFinal = Date.valueOf(scOficina.nextLine());
+		fechaFinal = Date.valueOf(scPedido.nextLine());
 
 		List<Pedido> pedidos = ejercicio4.selectPedidos(fechaInicio,fechaFinal);
 
@@ -127,5 +127,6 @@ public class Menu {
 	}
 
 	public static void Ejercicio5() {
+
 	}
 }
