@@ -116,10 +116,14 @@ public class Menu {
 
 		List<Pedido> pedidos = ejercicio4.selectPedidos(fechaInicio,fechaFinal);
 
-		pedidos.forEach(pedido -> {
-			System.out.println(pedido);
-			System.out.println();
-		});
+		if (!pedidos.isEmpty()){
+			pedidos.forEach(pedido -> {
+				System.out.println(pedido);
+				System.out.println();
+			});
+		}else{
+			System.out.println("No se han encontrado resultados");
+		}
 	}
 
 	public static void Ejercicio5() {
